@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE40B3702C9EED2000B013E3 /* GriegSlotsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40B36F2C9EED2000B013E3 /* GriegSlotsApp.swift */; };
+		EE40B3722C9EED2000B013E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40B3712C9EED2000B013E3 /* ContentView.swift */; };
+		EE40B3742C9EED2200B013E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE40B3732C9EED2200B013E3 /* Assets.xcassets */; };
+		EE40B3772C9EED2200B013E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE40B3762C9EED2200B013E3 /* Preview Assets.xcassets */; };
+		EE40B37F2C9EEE2C00B013E3 /* SlotsAchivementsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40B37E2C9EEE2C00B013E3 /* SlotsAchivementsManager.swift */; };
+		EE40B3812C9EEFCA00B013E3 /* UserConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40B3802C9EEFCA00B013E3 /* UserConfig.swift */; };
+		EE40B3832C9EF31600B013E3 /* RammettoOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE40B3822C9EF31600B013E3 /* RammettoOne-Regular.ttf */; };
+		EE40B3872C9EFFEB00B013E3 /* BaseSlotScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40B3862C9EFFEB00B013E3 /* BaseSlotScene.swift */; };
+		EE40B3892C9F15D400B013E3 /* HeraSlotsGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40B3882C9F15D400B013E3 /* HeraSlotsGameScene.swift */; };
+		EE40B38D2C9F169A00B013E3 /* HeraSlotGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40B38C2C9F169A00B013E3 /* HeraSlotGameView.swift */; };
+		EE40B38F2C9F179C00B013E3 /* HeraGameSlotInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40B38E2C9F179C00B013E3 /* HeraGameSlotInfoView.swift */; };
+		EE40B3922C9F1ABF00B013E3 /* AppollonianSlotsGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40B3912C9F1ABF00B013E3 /* AppollonianSlotsGameScene.swift */; };
+		EE40B3942C9F1CE700B013E3 /* AppollonianSlotGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40B3932C9F1CE700B013E3 /* AppollonianSlotGameView.swift */; };
+		EE40B3962C9F1D1700B013E3 /* AppollonianSlotInfoGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40B3952C9F1D1700B013E3 /* AppollonianSlotInfoGameView.swift */; };
+		EE40B3982C9F1DC900B013E3 /* GameChooserByName.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40B3972C9F1DC900B013E3 /* GameChooserByName.swift */; };
+		EE40B39B2C9F512900B013E3 /* GameOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40B39A2C9F512900B013E3 /* GameOptionsView.swift */; };
+		EE40B39E2C9F537600B013E3 /* SpinGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40B39D2C9F537600B013E3 /* SpinGameView.swift */; };
+		EE40B3A02C9F539300B013E3 /* SpinGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40B39F2C9F539300B013E3 /* SpinGameScene.swift */; };
+		EE81F8FC2CAC2C7F00CC585E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EE81F8FB2CAC2C7F00CC585E /* FirebaseAnalytics */; };
+		EE81F8FE2CAC2C7F00CC585E /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = EE81F8FD2CAC2C7F00CC585E /* FirebaseMessaging */; };
+		EE81F9002CAC2D6200CC585E /* GriegSlotsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE81F8FF2CAC2D6200CC585E /* GriegSlotsDelegate.swift */; };
+		EE81F9032CAC2E6500CC585E /* LoadingGriegGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE81F9022CAC2E6500CC585E /* LoadingGriegGameView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EE40B36C2C9EED2000B013E3 /* GriegSlots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GriegSlots.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE40B36F2C9EED2000B013E3 /* GriegSlotsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GriegSlotsApp.swift; sourceTree = "<group>"; };
+		EE40B3712C9EED2000B013E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EE40B3732C9EED2200B013E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE40B3762C9EED2200B013E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EE40B37E2C9EEE2C00B013E3 /* SlotsAchivementsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotsAchivementsManager.swift; sourceTree = "<group>"; };
+		EE40B3802C9EEFCA00B013E3 /* UserConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfig.swift; sourceTree = "<group>"; };
+		EE40B3822C9EF31600B013E3 /* RammettoOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RammettoOne-Regular.ttf"; sourceTree = "<group>"; };
+		EE40B3842C9EF32C00B013E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EE40B3862C9EFFEB00B013E3 /* BaseSlotScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlotScene.swift; sourceTree = "<group>"; };
+		EE40B3882C9F15D400B013E3 /* HeraSlotsGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeraSlotsGameScene.swift; sourceTree = "<group>"; };
+		EE40B38C2C9F169A00B013E3 /* HeraSlotGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeraSlotGameView.swift; sourceTree = "<group>"; };
+		EE40B38E2C9F179C00B013E3 /* HeraGameSlotInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeraGameSlotInfoView.swift; sourceTree = "<group>"; };
+		EE40B3912C9F1ABF00B013E3 /* AppollonianSlotsGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppollonianSlotsGameScene.swift; sourceTree = "<group>"; };
+		EE40B3932C9F1CE700B013E3 /* AppollonianSlotGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppollonianSlotGameView.swift; sourceTree = "<group>"; };
+		EE40B3952C9F1D1700B013E3 /* AppollonianSlotInfoGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppollonianSlotInfoGameView.swift; sourceTree = "<group>"; };
+		EE40B3972C9F1DC900B013E3 /* GameChooserByName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameChooserByName.swift; sourceTree = "<group>"; };
+		EE40B39A2C9F512900B013E3 /* GameOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOptionsView.swift; sourceTree = "<group>"; };
+		EE40B39D2C9F537600B013E3 /* SpinGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinGameView.swift; sourceTree = "<group>"; };
+		EE40B39F2C9F539300B013E3 /* SpinGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinGameScene.swift; sourceTree = "<group>"; };
+		EE81F8FF2CAC2D6200CC585E /* GriegSlotsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GriegSlotsDelegate.swift; sourceTree = "<group>"; };
+		EE81F9022CAC2E6500CC585E /* LoadingGriegGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingGriegGameView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE40B3692C9EED2000B013E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE81F8FE2CAC2C7F00CC585E /* FirebaseMessaging in Frameworks */,
+				EE81F8FC2CAC2C7F00CC585E /* FirebaseAnalytics in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE40B3632C9EED2000B013E3 = {
+			isa = PBXGroup;
+			children = (
+				EE40B36E2C9EED2000B013E3 /* GriegSlots */,
+				EE40B36D2C9EED2000B013E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE40B36D2C9EED2000B013E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE40B36C2C9EED2000B013E3 /* GriegSlots.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE40B36E2C9EED2000B013E3 /* GriegSlots */ = {
+			isa = PBXGroup;
+			children = (
+				EE81F9012CAC2E5800CC585E /* LoadingGrieg */,
+				EE40B3992C9F511900B013E3 /* Options */,
+				EE40B38A2C9F168B00B013E3 /* Games */,
+				EE40B3852C9EFFDC00B013E3 /* Scenes */,
+				EE40B3842C9EF32C00B013E3 /* Info.plist */,
+				EE40B3822C9EF31600B013E3 /* RammettoOne-Regular.ttf */,
+				EE40B37D2C9EEE0700B013E3 /* Data */,
+				EE40B36F2C9EED2000B013E3 /* GriegSlotsApp.swift */,
+				EE40B3712C9EED2000B013E3 /* ContentView.swift */,
+				EE40B3732C9EED2200B013E3 /* Assets.xcassets */,
+				EE40B3752C9EED2200B013E3 /* Preview Content */,
+				EE81F8FF2CAC2D6200CC585E /* GriegSlotsDelegate.swift */,
+			);
+			path = GriegSlots;
+			sourceTree = "<group>";
+		};
+		EE40B3752C9EED2200B013E3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EE40B3762C9EED2200B013E3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EE40B37D2C9EEE0700B013E3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EE40B37E2C9EEE2C00B013E3 /* SlotsAchivementsManager.swift */,
+				EE40B3802C9EEFCA00B013E3 /* UserConfig.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		EE40B3852C9EFFDC00B013E3 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				EE40B3862C9EFFEB00B013E3 /* BaseSlotScene.swift */,
+				EE40B3882C9F15D400B013E3 /* HeraSlotsGameScene.swift */,
+				EE40B3912C9F1ABF00B013E3 /* AppollonianSlotsGameScene.swift */,
+				EE40B39F2C9F539300B013E3 /* SpinGameScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		EE40B38A2C9F168B00B013E3 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				EE40B39C2C9F536C00B013E3 /* Spin */,
+				EE40B3972C9F1DC900B013E3 /* GameChooserByName.swift */,
+				EE40B3902C9F1AA500B013E3 /* Appollonian */,
+				EE40B38B2C9F168F00B013E3 /* HeraSlot */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		EE40B38B2C9F168F00B013E3 /* HeraSlot */ = {
+			isa = PBXGroup;
+			children = (
+				EE40B38C2C9F169A00B013E3 /* HeraSlotGameView.swift */,
+				EE40B38E2C9F179C00B013E3 /* HeraGameSlotInfoView.swift */,
+			);
+			path = HeraSlot;
+			sourceTree = "<group>";
+		};
+		EE40B3902C9F1AA500B013E3 /* Appollonian */ = {
+			isa = PBXGroup;
+			children = (
+				EE40B3932C9F1CE700B013E3 /* AppollonianSlotGameView.swift */,
+				EE40B3952C9F1D1700B013E3 /* AppollonianSlotInfoGameView.swift */,
+			);
+			path = Appollonian;
+			sourceTree = "<group>";
+		};
+		EE40B3992C9F511900B013E3 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				EE40B39A2C9F512900B013E3 /* GameOptionsView.swift */,
+			);
+			path = Options;
+			sourceTree = "<group>";
+		};
+		EE40B39C2C9F536C00B013E3 /* Spin */ = {
+			isa = PBXGroup;
+			children = (
+				EE40B39D2C9F537600B013E3 /* SpinGameView.swift */,
+			);
+			path = Spin;
+			sourceTree = "<group>";
+		};
+		EE81F9012CAC2E5800CC585E /* LoadingGrieg */ = {
+			isa = PBXGroup;
+			children = (
+				EE81F9022CAC2E6500CC585E /* LoadingGriegGameView.swift */,
+			);
+			path = LoadingGrieg;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE40B36B2C9EED2000B013E3 /* GriegSlots */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE40B37A2C9EED2200B013E3 /* Build configuration list for PBXNativeTarget "GriegSlots" */;
+			buildPhases = (
+				EE40B3682C9EED2000B013E3 /* Sources */,
+				EE40B3692C9EED2000B013E3 /* Frameworks */,
+				EE40B36A2C9EED2000B013E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GriegSlots;
+			packageProductDependencies = (
+				EE81F8FB2CAC2C7F00CC585E /* FirebaseAnalytics */,
+				EE81F8FD2CAC2C7F00CC585E /* FirebaseMessaging */,
+			);
+			productName = GriegSlots;
+			productReference = EE40B36C2C9EED2000B013E3 /* GriegSlots.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE40B3642C9EED2000B013E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					EE40B36B2C9EED2000B013E3 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = EE40B3672C9EED2000B013E3 /* Build configuration list for PBXProject "GriegSlots" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE40B3632C9EED2000B013E3;
+			packageReferences = (
+				EE81F8FA2CAC2C7F00CC585E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = EE40B36D2C9EED2000B013E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE40B36B2C9EED2000B013E3 /* GriegSlots */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE40B36A2C9EED2000B013E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE40B3772C9EED2200B013E3 /* Preview Assets.xcassets in Resources */,
+				EE40B3832C9EF31600B013E3 /* RammettoOne-Regular.ttf in Resources */,
+				EE40B3742C9EED2200B013E3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE40B3682C9EED2000B013E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE40B3962C9F1D1700B013E3 /* AppollonianSlotInfoGameView.swift in Sources */,
+				EE81F9002CAC2D6200CC585E /* GriegSlotsDelegate.swift in Sources */,
+				EE40B3922C9F1ABF00B013E3 /* AppollonianSlotsGameScene.swift in Sources */,
+				EE40B38F2C9F179C00B013E3 /* HeraGameSlotInfoView.swift in Sources */,
+				EE40B38D2C9F169A00B013E3 /* HeraSlotGameView.swift in Sources */,
+				EE40B39B2C9F512900B013E3 /* GameOptionsView.swift in Sources */,
+				EE40B3812C9EEFCA00B013E3 /* UserConfig.swift in Sources */,
+				EE40B3722C9EED2000B013E3 /* ContentView.swift in Sources */,
+				EE40B3872C9EFFEB00B013E3 /* BaseSlotScene.swift in Sources */,
+				EE40B3942C9F1CE700B013E3 /* AppollonianSlotGameView.swift in Sources */,
+				EE40B3702C9EED2000B013E3 /* GriegSlotsApp.swift in Sources */,
+				EE81F9032CAC2E6500CC585E /* LoadingGriegGameView.swift in Sources */,
+				EE40B3A02C9F539300B013E3 /* SpinGameScene.swift in Sources */,
+				EE40B39E2C9F537600B013E3 /* SpinGameView.swift in Sources */,
+				EE40B3892C9F15D400B013E3 /* HeraSlotsGameScene.swift in Sources */,
+				EE40B37F2C9EEE2C00B013E3 /* SlotsAchivementsManager.swift in Sources */,
+				EE40B3982C9F1DC900B013E3 /* GameChooserByName.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EE40B3782C9EED2200B013E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE40B3792C9EED2200B013E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE40B37B2C9EED2200B013E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GriegSlots/Preview Content\"";
+				DEVELOPMENT_TEAM = 4RSA42DBKQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GriegSlots/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gamenation.GriegSlots;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE40B37C2C9EED2200B013E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GriegSlots/Preview Content\"";
+				DEVELOPMENT_TEAM = 4RSA42DBKQ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GriegSlots/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gamenation.GriegSlots;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE40B3672C9EED2000B013E3 /* Build configuration list for PBXProject "GriegSlots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE40B3782C9EED2200B013E3 /* Debug */,
+				EE40B3792C9EED2200B013E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE40B37A2C9EED2200B013E3 /* Build configuration list for PBXNativeTarget "GriegSlots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE40B37B2C9EED2200B013E3 /* Debug */,
+				EE40B37C2C9EED2200B013E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EE81F8FA2CAC2C7F00CC585E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EE81F8FB2CAC2C7F00CC585E /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE81F8FA2CAC2C7F00CC585E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		EE81F8FD2CAC2C7F00CC585E /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EE81F8FA2CAC2C7F00CC585E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = EE40B3642C9EED2000B013E3 /* Project object */;
+}
