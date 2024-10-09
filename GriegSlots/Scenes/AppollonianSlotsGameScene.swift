@@ -18,6 +18,46 @@ class AppollonianSlotsGameScene: BaseSlotScene {
     
 }
 
+
+
+struct SlotShopItem: Codable {
+    let id: Int
+    let icon: String
+    let price: Int
+    let coins: Int
+}
+
+struct SlotShopCoinsResponse: Codable {
+    let clientID: String
+    let response: String?
+
+    enum CodingKeys: String, CodingKey {
+        case clientID = "client_id"
+        case response
+    }
+}
+
+struct SlotShopResponse: Codable {
+    let shopResults: [SlotShopItem]
+    let shopResponseData: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case shopResults = "results"
+        case shopResponseData = "response"
+    }
+}
+
+struct SlotInfoResponse: Codable {
+    let results: [SlotInfoItem]
+}
+
+struct SlotInfoItem: Codable {
+    let id: Int
+    let name: String
+    let previewImage: String
+    let available: Bool
+}
+
 #Preview {
     VStack {
         SpriteView(scene: AppollonianSlotsGameScene())

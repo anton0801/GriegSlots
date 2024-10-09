@@ -15,6 +15,10 @@ struct GameChooserByName: View {
             AppollonianSlotGameView()
                 .environmentObject(userConfig)
                 .environmentObject(slotsRang)
+        } else if name == "PINKO BALL" {
+            PinkoBallGameView()
+                .environmentObject(userConfig)
+                .environmentObject(slotsRang)
         }
     }
 }

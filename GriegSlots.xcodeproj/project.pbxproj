@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE18E7442CB5C6EF008A157D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE18E7432CB5C6EF008A157D /* GoogleService-Info.plist */; };
 		EE40B3702C9EED2000B013E3 /* GriegSlotsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40B36F2C9EED2000B013E3 /* GriegSlotsApp.swift */; };
 		EE40B3722C9EED2000B013E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40B3712C9EED2000B013E3 /* ContentView.swift */; };
 		EE40B3742C9EED2200B013E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE40B3732C9EED2200B013E3 /* Assets.xcassets */; };
@@ -25,13 +26,17 @@
 		EE40B39B2C9F512900B013E3 /* GameOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40B39A2C9F512900B013E3 /* GameOptionsView.swift */; };
 		EE40B39E2C9F537600B013E3 /* SpinGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40B39D2C9F537600B013E3 /* SpinGameView.swift */; };
 		EE40B3A02C9F539300B013E3 /* SpinGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE40B39F2C9F539300B013E3 /* SpinGameScene.swift */; };
+		EE7AD91D2CAEB469000209F0 /* MainHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7AD91C2CAEB469000209F0 /* MainHomeView.swift */; };
 		EE81F8FC2CAC2C7F00CC585E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EE81F8FB2CAC2C7F00CC585E /* FirebaseAnalytics */; };
 		EE81F8FE2CAC2C7F00CC585E /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = EE81F8FD2CAC2C7F00CC585E /* FirebaseMessaging */; };
 		EE81F9002CAC2D6200CC585E /* GriegSlotsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE81F8FF2CAC2D6200CC585E /* GriegSlotsDelegate.swift */; };
 		EE81F9032CAC2E6500CC585E /* LoadingGriegGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE81F9022CAC2E6500CC585E /* LoadingGriegGameView.swift */; };
+		EE8E000B2CB15ACD00A48C4E /* PinkoBallGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8E000A2CB15ACD00A48C4E /* PinkoBallGameScene.swift */; };
+		EE8E000E2CB1611900A48C4E /* PinkoBallGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8E000D2CB1611900A48C4E /* PinkoBallGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE18E7432CB5C6EF008A157D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE40B36C2C9EED2000B013E3 /* GriegSlots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GriegSlots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE40B36F2C9EED2000B013E3 /* GriegSlotsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GriegSlotsApp.swift; sourceTree = "<group>"; };
 		EE40B3712C9EED2000B013E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,8 +57,11 @@
 		EE40B39A2C9F512900B013E3 /* GameOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOptionsView.swift; sourceTree = "<group>"; };
 		EE40B39D2C9F537600B013E3 /* SpinGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinGameView.swift; sourceTree = "<group>"; };
 		EE40B39F2C9F539300B013E3 /* SpinGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinGameScene.swift; sourceTree = "<group>"; };
+		EE7AD91C2CAEB469000209F0 /* MainHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeView.swift; sourceTree = "<group>"; };
 		EE81F8FF2CAC2D6200CC585E /* GriegSlotsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GriegSlotsDelegate.swift; sourceTree = "<group>"; };
 		EE81F9022CAC2E6500CC585E /* LoadingGriegGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingGriegGameView.swift; sourceTree = "<group>"; };
+		EE8E000A2CB15ACD00A48C4E /* PinkoBallGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkoBallGameScene.swift; sourceTree = "<group>"; };
+		EE8E000D2CB1611900A48C4E /* PinkoBallGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkoBallGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +96,7 @@
 		EE40B36E2C9EED2000B013E3 /* GriegSlots */ = {
 			isa = PBXGroup;
 			children = (
+				EE18E7432CB5C6EF008A157D /* GoogleService-Info.plist */,
 				EE81F9012CAC2E5800CC585E /* LoadingGrieg */,
 				EE40B3992C9F511900B013E3 /* Options */,
 				EE40B38A2C9F168B00B013E3 /* Games */,
@@ -128,6 +137,7 @@
 				EE40B3882C9F15D400B013E3 /* HeraSlotsGameScene.swift */,
 				EE40B3912C9F1ABF00B013E3 /* AppollonianSlotsGameScene.swift */,
 				EE40B39F2C9F539300B013E3 /* SpinGameScene.swift */,
+				EE8E000A2CB15ACD00A48C4E /* PinkoBallGameScene.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -139,6 +149,8 @@
 				EE40B3972C9F1DC900B013E3 /* GameChooserByName.swift */,
 				EE40B3902C9F1AA500B013E3 /* Appollonian */,
 				EE40B38B2C9F168F00B013E3 /* HeraSlot */,
+				EE7AD91C2CAEB469000209F0 /* MainHomeView.swift */,
+				EE8E000D2CB1611900A48C4E /* PinkoBallGameView.swift */,
 			);
 			path = Games;
 			sourceTree = "<group>";
@@ -251,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE40B3772C9EED2200B013E3 /* Preview Assets.xcassets in Resources */,
+				EE18E7442CB5C6EF008A157D /* GoogleService-Info.plist in Resources */,
 				EE40B3832C9EF31600B013E3 /* RammettoOne-Regular.ttf in Resources */,
 				EE40B3742C9EED2200B013E3 /* Assets.xcassets in Resources */,
 			);
@@ -263,10 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE8E000B2CB15ACD00A48C4E /* PinkoBallGameScene.swift in Sources */,
 				EE40B3962C9F1D1700B013E3 /* AppollonianSlotInfoGameView.swift in Sources */,
 				EE81F9002CAC2D6200CC585E /* GriegSlotsDelegate.swift in Sources */,
 				EE40B3922C9F1ABF00B013E3 /* AppollonianSlotsGameScene.swift in Sources */,
 				EE40B38F2C9F179C00B013E3 /* HeraGameSlotInfoView.swift in Sources */,
+				EE7AD91D2CAEB469000209F0 /* MainHomeView.swift in Sources */,
 				EE40B38D2C9F169A00B013E3 /* HeraSlotGameView.swift in Sources */,
 				EE40B39B2C9F512900B013E3 /* GameOptionsView.swift in Sources */,
 				EE40B3812C9EEFCA00B013E3 /* UserConfig.swift in Sources */,
@@ -276,6 +291,7 @@
 				EE40B3702C9EED2000B013E3 /* GriegSlotsApp.swift in Sources */,
 				EE81F9032CAC2E6500CC585E /* LoadingGriegGameView.swift in Sources */,
 				EE40B3A02C9F539300B013E3 /* SpinGameScene.swift in Sources */,
+				EE8E000E2CB1611900A48C4E /* PinkoBallGameView.swift in Sources */,
 				EE40B39E2C9F537600B013E3 /* SpinGameView.swift in Sources */,
 				EE40B3892C9F15D400B013E3 /* HeraSlotsGameScene.swift in Sources */,
 				EE40B37F2C9EEE2C00B013E3 /* SlotsAchivementsManager.swift in Sources */,

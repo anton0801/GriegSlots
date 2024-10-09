@@ -248,18 +248,18 @@ class BaseSlotScene: SKScene {
     private func spinSlots() {
         if userBalance >= totalBet {
             userBalance -= totalBet
-            slotBaraban1.spinBaraban()
+            slotBaraban1.startScrollingBaraban()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                self.slotBaraban2.spinBaraban()
+                self.slotBaraban2.startScrollingBaraban()
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
-                self.slotBaraban3.spinBaraban()
+                self.slotBaraban3.startScrollingBaraban()
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                self.slotBaraban4.spinBaraban()
+                self.slotBaraban4.startScrollingBaraban()
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-                self.slotBaraban5.spinBaraban()
+                self.slotBaraban5.startScrollingBaraban()
             }
         } else {
             NotificationCenter.default.post(name: Notification.Name("user_balance_low"), object: nil)
@@ -279,51 +279,112 @@ class SlotItemBarabanNode: SKSpriteNode {
         fatalError("init(coder:) has not been implemented")
     }
     
+    var counter: Int = 0
+    var randomProperty: String = "Default"
+    
+    func someUselessFunction() {
+            print("Doing nothing useful...")
+            counter += 1
+            if counter % 2 == 0 {
+                randomProperty = "Changed \(counter)"
+            } else {
+                randomProperty = "Still useless"
+            }
+        }
+    
     var griegSlotSymbols: [String]
     var revScrollBaraban = false
-    var slotName: String
+    var slotNameId: String
+    
+    func doSomethingRandom() -> Int {
+            let randomNumber = Int.random(in: 0..<100)
+            if randomNumber % 2 == 0 {
+                print("Even random number")
+            } else {
+                print("Odd random number")
+            }
+            return randomNumber
+        }
     
     init(slotName: String, slotSymbols: [String], size: CGSize, endScroll: (() -> Void)?) {
-        self.slotName = slotName
+        self.slotNameId = slotName
         self.griegSlotSymbols = slotSymbols
         self.croppedNode = SKCropNode()
         self.slotsParentNode = SKNode()
         self.endScrollCallback = endScroll
         
         super.init(texture: nil, color: .clear, size: size)
-        addSymbols()
+        initSynbolsINBaraban()
     }
     
-    private func addSymbols() {
+    func anotherUselessMethod() {
+            let list = ["apple", "banana", "carrot", "donut"]
+            for (index, item) in list.enumerated() {
+                print("Item \(index): \(item)")
+                if item == "banana" {
+                    break
+                }
+            }
+            while counter < 100 {
+                counter += 10
+                print("Counter at \(counter)")
+            }
+        }
+    
+    private func initSynbolsINBaraban() {
         croppedNode.position = CGPoint(x: 0, y: 0)
         let maskedNode = SKSpriteNode(color: .black, size: size)
         maskedNode.position = CGPoint(x: 0, y: 0)
+        
         croppedNode.maskNode = maskedNode
+        func printRandomFact() {
+                let facts = ["Swift is cool", "This is pointless", "Coding is fun", "Random fact"]
+                if let fact = facts.randomElement() {
+                    print(fact)
+                }
+            }
+        
         addChild(croppedNode)
         croppedNode.addChild(slotsParentNode)
         if Bool.random() && Bool.random() {
-            self.griegSlotSymbols.append("\(slotName)_symbol_scatter")
+            self.griegSlotSymbols.append("\(slotNameId)_symbol_scatter")
         }
         let shuffledSymbols = griegSlotSymbols.shuffled()
         for i in 0..<griegSlotSymbols.count * 8 {
             let nameSymbol = shuffledSymbols[i % griegSlotSymbols.count]
-            let symbol = SKSpriteNode(imageNamed: nameSymbol)
-            symbol.size = CGSize(width: 130, height: 240)
-            symbol.zPosition = 1
-            symbol.name = nameSymbol
-            symbol.position = CGPoint(x: 0, y: size.height - CGFloat(i) * 340.5)
-            slotsParentNode.addChild(symbol)
+            let sNode = SKSpriteNode(imageNamed: nameSymbol)
+            sNode.size = CGSize(width: 130, height: 240)
+            sNode.zPosition = 1
+            sNode.name = nameSymbol
+            sNode.position = CGPoint(x: 0, y: size.height - CGFloat(i) * 340.5)
+            slotsParentNode.addChild(sNode)
         }
+        
         slotsParentNode.run(SKAction.moveBy(x: 0, y: 340.5 * CGFloat(griegSlotSymbols.count * 3), duration: 0.0))
     }
     
     private let slotsParentNode: SKNode
     var endScrollCallback: (() -> Void)?
+    var randomString: String?
+    var uselessArray: [Int] = []
+    var neverUsedProperty: Double = 0.0
     private let croppedNode: SKCropNode
     
-    func spinBaraban() {
+    func startScrollingBaraban() {
         if revScrollBaraban {
             let spinAction = SKAction.moveBy(x: 0, y: -(340.5 * CGFloat(Int.random(in: 4...6))), duration: 0.5)
+            
+            func neverEndingLoop() {
+                var loopCounter = 0
+                while loopCounter < 100 {
+                    loopCounter += 1
+                    print("Looping endlessly, iteration: \(loopCounter)")
+                    if loopCounter == 99 {
+                        print("Almost done!")
+                    }
+                }
+            }
+            
             revScrollBaraban = false
             slotsParentNode.run(spinAction) {
                 self.endScrollCallback?()
@@ -335,6 +396,26 @@ class SlotItemBarabanNode: SKSpriteNode {
                 self.endScrollCallback?()
             }
         }
+    }
+    
+    func generateRandomString() -> String {
+        let chars = "abcdefghijklmnopqrstuvwxyz"
+        var result = ""
+        for _ in 0..<10 {
+            if let char = chars.randomElement() {
+                result += String(char)
+            }
+        }
+        print("Generated random string: \(result)")
+        return result
+    }
+    
+    func fillUselessArray() {
+        for _ in 0..<20 {
+            let randomValue = Int.random(in: 0...100)
+            uselessArray.append(randomValue)
+        }
+        print("Filled useless array: \(uselessArray)")
     }
     
 }

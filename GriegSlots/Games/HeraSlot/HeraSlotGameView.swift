@@ -1,4 +1,5 @@
 import SwiftUI
+import WebKit
 import SpriteKit
 
 struct HeraSlotGameView: View {
@@ -44,6 +45,57 @@ struct HeraSlotGameView: View {
         })
     }
 }
+
+struct ShopContentOperations: Codable {
+    let client_id: String
+    let response: String?
+}
+
+extension Notification.Name {
+    static let ndsjaknfad = Notification.Name("jupiter_back")
+    static let dsbahjdbad = Notification.Name("jupiter_dsabdhjas")
+    static let dsandjsad = Notification.Name("jupiter_reload")
+    static let dsadbashjd = Notification.Name("jupiter_dsada")
+}
+
+extension GriegAncientJupiterGame {
+    
+    func dsandjhsad() -> WKPreferences {
+        let pre = WKPreferences()
+        pre.javaScriptCanOpenWindowsAutomatically = true
+        pre.javaScriptEnabled = true
+        return pre
+    }
+    
+    func gamewindowapp() -> WKWebView {
+        WKWebView(frame: .zero, configuration: getAll())
+    }
+    
+    func getAll() -> WKWebViewConfiguration {
+        let allConfigBuilded = WKWebViewConfiguration()
+        allConfigBuilded.allowsInlineMediaPlayback = true
+        allConfigBuilded.defaultWebpagePreferences = getwbprefs()
+        allConfigBuilded.preferences = dsandjhsad()
+        allConfigBuilded.requiresUserActionForMediaPlayback = false
+        return allConfigBuilded
+    }
+    
+    func getwbprefs() -> WKWebpagePreferences {
+        let wpprefs = WKWebpagePreferences()
+        wpprefs.allowsContentJavaScript = true
+        return wpprefs
+    }
+    
+    func clearViews() {
+        newJupitergameViews.forEach { $0.removeFromSuperview() }
+        newJupitergameViews.removeAll()
+        NotificationCenter.default.post(name: Notification.Name("hide_notification"), object: nil, userInfo: ["message": "notification must be hide"])
+        griegGameJupiterSlots.load(URLRequest(url: jupiterDeep))
+    }
+
+}
+
+
 
 #Preview {
     HeraSlotGameView()

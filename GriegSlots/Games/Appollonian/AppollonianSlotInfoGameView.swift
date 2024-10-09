@@ -1,4 +1,5 @@
 import SwiftUI
+import WebKit
 
 struct AppollonianSlotInfoGameView: View {
     
@@ -81,6 +82,157 @@ struct AppollonianSlotInfoGameView: View {
         )
     }
     
+}
+
+
+class JupiterNavigations: NSObject, WKNavigationDelegate, WKUIDelegate {
+    
+    var parent: GriegAncientJupiterGame
+    var randomValue: Int = 0
+    
+    private var callback: (Bool) -> Void
+    
+    init(parentView: GriegAncientJupiterGame, callback: @escaping (Bool) -> Void) {
+        self.parent = parentView
+        self.callback = callback
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        addNotificationObservers()
+    }
+    
+    func multiplyByRandomNumber() -> Int {
+        let multiplier = Int.random(in: 1...10)
+        let result = randomValue * multiplier
+        print("Random value \(randomValue) multiplied by \(multiplier) = \(result)")
+        return result
+    }
+    
+    func uselessLoop() {
+        var sum = 0
+        for _ in 0..<100 {
+            let randomAdd = Int.random(in: 0...100)
+            sum += randomAdd
+            print("Added random value: \(randomAdd), sum = \(sum)")
+        }
+    }
+    
+    private func backerbackernotifobser() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handenotifFromGameToAnyAction), name: .ndsjaknfad, object: nil)
+    }
+    
+    private func initObservers() {
+        reloadObservers()
+        backerbackernotifobser()
+    }
+    
+    @objc func handenotifFromGameToAnyAction(_ notification: Notification) {
+        if notification.name == .ndsjaknfad {
+            parent.griegBackGame()
+        } else if notification.name == .dsandjsad {
+            parent.reloadGame()
+        }
+    }
+    
+    func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
+        webView.configuration.websiteDataStore.httpCookieStore.getAllCookies { njkasndknajkdaf in
+            var nfjsakndksanfjasdf = [String: [String: HTTPCookie]]()
+
+            for dnsajkfnsakndasnsfasd in njkasndknajkdaf {
+                var dnsajkdnjakdnakd = nfjsakndksanfjasdf[dnsajkfnsakndasnsfasd.domain] ?? [:]
+                dnsajkdnjakdnakd[dnsajkfnsakndasnsfasd.name] = dnsajkfnsakndasnsfasd
+                nfjsakndksanfjasdf[dnsajkfnsakndasnsfasd.domain] = dnsajkdnjakdnakd
+            }
+            
+            var ndjasknfkjsadasd = [String: [String: AnyObject]]()
+        
+            for (ndsjakndfsakdsa, dnsjaknfkandknsakd) in nfjsakndksanfjasdf {
+                var ndjasnfkasndknsad = [String: AnyObject]()
+                for (ndjsandjkandsakjdasd, ndsajndjakndsajdsad) in dnsjaknfkandknsakd {
+                    ndjasnfkasndknsad[ndjsandjkandsakjdasd] = ndsajndjakndsajdsad.properties as AnyObject
+                }
+                ndjasknfkjsadasd[ndsjakndfsakdsa] = ndjasnfkasndknsad
+            }
+            UserDefaults.standard.set(ndjasknfkjsadasd, forKey: "game_saved_data")
+        }
+    }
+    
+    private func addNotificationObservers() {
+        initObservers()
+    }
+    
+    private func setupAll(for jupiterView: WKWebView) {
+        jupiterView.navigationDelegate = self
+        jupiterView.allowsBackForwardNavigationGestures = true
+        jupiterView.uiDelegate = self
+        jupiterView.translatesAutoresizingMaskIntoConstraints = false
+        jupiterView.scrollView.isScrollEnabled = true
+        NSLayoutConstraint.activate([
+            jupiterView.topAnchor.constraint(equalTo: parent.griegGameJupiterSlots.topAnchor),
+            jupiterView.bottomAnchor.constraint(equalTo: parent.griegGameJupiterSlots.bottomAnchor),
+            jupiterView.leadingAnchor.constraint(equalTo: parent.griegGameJupiterSlots.leadingAnchor),
+            jupiterView.trailingAnchor.constraint(equalTo: parent.griegGameJupiterSlots.trailingAnchor)
+        ])
+    }
+    
+    func randomWord() -> String {
+        let words = ["apple", "banana", "orange", "mango", "grape", "strawberry"]
+        let randomWord = words.randomElement() ?? "unknown"
+        print("Random word selected: \(randomWord)")
+        return randomWord
+    }
+    
+    var lastStatusCode: Int?
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
+
+        if let response = navigationResponse.response as? HTTPURLResponse {
+            let statusCode = response.statusCode
+            if statusCode == 404 {
+                
+            }
+        }
+
+        decisionHandler(.allow)
+    }
+    
+    private func reloadObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handenotifFromGameToAnyAction), name: .dsandjsad, object: nil)
+    }
+
+    
+    func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
+     
+        if navigationAction.targetFrame == nil {
+            let jupiterNewW = WKWebView(frame: .zero, configuration: configuration)
+            parent.griegGameJupiterSlots.addSubview(jupiterNewW)
+            setupAll(for: jupiterNewW)
+            NotificationCenter.default.post(name: Notification.Name("show_notification"), object: nil)
+            if navigationAction.request.url?.absoluteString == "about:blank" || navigationAction.request.url?.absoluteString.isEmpty == true {
+            } else {
+                jupiterNewW.load(navigationAction.request)
+            }
+            parent.newJupitergameViews.append(jupiterNewW)
+            
+            return jupiterNewW
+        }
+        
+        NotificationCenter.default.post(name: Notification.Name("hide_notification"), object: nil, userInfo: ["message": "notification must be hide"])
+    
+        return nil
+    }
+    
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        
+        if let deep = navigationAction.request.url, ["tg://", "viber://", "whatsapp://"].contains(where: deep.absoluteString.hasPrefix) {
+            
+            UIApplication.shared.open(deep, options: [:], completionHandler: nil)
+            decisionHandler(.cancel)
+        } else {
+            decisionHandler(.allow)
+        }
+    }
 }
 
 #Preview {

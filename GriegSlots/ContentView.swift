@@ -13,6 +13,7 @@ struct ContentView: View {
     
     var slots = [
         "slot_hera",
+        "pinko_ball",
         "slot_apollonian",
         "slot_sweet_rome"
     ]
@@ -121,8 +122,10 @@ struct ContentView: View {
                         if newValue == 0 {
                             selectedSlot = "HERA"
                         } else if newValue == 1 {
-                            selectedSlot = "APPOLLINIAN"
+                            selectedSlot = "PINKO BALL"
                         } else if newValue == 2 {
+                            selectedSlot = "APPOLLINIAN"
+                        } else if newValue == 3 {
                             selectedSlot = "SWEET ROME"
                         }
                     }

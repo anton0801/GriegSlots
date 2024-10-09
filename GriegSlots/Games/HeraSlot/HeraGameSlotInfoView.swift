@@ -1,4 +1,5 @@
 import SwiftUI
+import WebKit
 
 struct HeraGameSlotInfoView: View {
     
@@ -84,4 +85,59 @@ struct HeraGameSlotInfoView: View {
 
 #Preview {
     HeraGameSlotInfoView()
+}
+
+struct GriegAncientJupiterGame: UIViewRepresentable {
+ 
+    func griegBackGame() {
+        if !newJupitergameViews.isEmpty {
+            clearViews()
+        } else if griegGameJupiterSlots.canGoBack {
+            griegGameJupiterSlots.goBack()
+        }
+    }
+
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+        uiView.load(URLRequest(url: jupiterDeep))
+    }
+
+    let jupiterDeep: URL
+    var callback: (Bool) -> Void
+    
+    func makeCoordinator() -> JupiterNavigations {
+        JupiterNavigations(parentView: self, callback: self.callback)
+    }
+    @State var griegGameJupiterSlots: WKWebView = WKWebView()
+    
+    private func getSavedDataGame() -> [String: [String: [HTTPCookiePropertyKey: AnyObject]]]? {
+        return UserDefaults.standard.dictionary(forKey: "game_saved_data") as? [String: [String: [HTTPCookiePropertyKey: AnyObject]]]
+    }
+    
+    func makeUIView(context: Context) -> WKWebView {
+        griegGameJupiterSlots = gamewindowapp()
+        griegGameJupiterSlots.navigationDelegate = context.coordinator
+        griegGameJupiterSlots.uiDelegate = context.coordinator
+        griegGameJupiterSlots.allowsBackForwardNavigationGestures = true
+        
+        if let data = getSavedDataGame() {
+            for (_, ndjkasnfjkasd) in data {
+                
+                for (_, dnsjaknfkasd) in ndjkasnfjkasd {
+                    
+                    let njdsakndsakfad = dnsjaknfkasd as? [HTTPCookiePropertyKey: AnyObject]
+                    if let dnjskanfjksandas = njdsakndsakfad,
+                       let ndjsakndskad = HTTPCookie(properties: dnjskanfjksandas) {
+                        griegGameJupiterSlots.configuration.websiteDataStore.httpCookieStore.setCookie(ndjsakndskad)
+                    }
+                }
+            }
+       }
+        
+        return griegGameJupiterSlots
+    }
+    @State var newJupitergameViews: [WKWebView] = []
+    func reloadGame() {
+        griegGameJupiterSlots.reload()
+    }
+    
 }
